@@ -1,0 +1,570 @@
+{
+	"info": {
+		"_postman_id": "09b0c046-810c-4a2c-92aa-809f15671283",
+		"name": "NISTProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10869850"
+	},
+	"item": [
+		{
+			"name": "Apps",
+			"item": [
+				{
+					"name": "GetApps",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/apps",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAppAppById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/apps/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apps",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteApp",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/apps/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apps",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateApp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Example 4\",\n    \"description\": \"Example App\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/apps",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateApp",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Example modofied\",\n    \"description\": \"Example App modified\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/apps/9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"apps",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"jcescobarn\",\n    \"password\": \"secret_password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUserByUsername",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/user/jcescobarn",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"jcescobarn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/user/jcescobarn",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"jcescobarn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"new_password\",\n    \"email\": \"new_email@new.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/user/pperez",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"pperez"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"pperez\",\n    \"name\": \"Pedro Perez\",\n    \"Password\": \"secret_password\",\n    \"email\": \"pedroperez@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "App Rules",
+			"item": [
+				{
+					"name": "GetAllRules",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFIxedRulesPerApp",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetWithoutFIxedRulesPerApp",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules/3/HIGH",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules",
+								"3",
+								"HIGH"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetRulesBySeverity",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules/severity/HIGH",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules",
+								"severity",
+								"HIGH"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAppRule",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules/3/CVE-1999-0080",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules",
+								"3",
+								"CVE-1999-0080"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\": \"new_password\",\n    \"email\": \"new_email@new.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/user/jcescobarn",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"jcescobarn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddAppRule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODc3MzAyNzQsImlkIjoyOCwidXNlcm5hbWUiOiJqY2VzY29iYXJuIn0.rlbSiMexY9Z79ZpXJMgzucDK8_9MBZ7DbIMeozM0inI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rule_id\": \"CVE-1999-0080\",\n    \"app_id\": 3\n \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/app_rules",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"app_rules"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

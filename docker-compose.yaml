@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+    db:
+        container_name: MELITest-db    
+        build:
+          context: ./DB
+          dockerfile: Dockerfile
+        ports:
+            - "5432:5432"    
+        restart: unless-stopped
+        environment:
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB}
+        volumes:
+            - ${POSTGRES_FOLDER}:/var/lib/postgresql/data
+
+    backend:
+      build:
+        context: ./go-backend
+        dockerfile: Dockerfile
+      ports:
+        - 8080:8080
+      depends_on:
+        - db
+
+networks: 
+  default: 
+    name: MELINIST
