@@ -35,5 +35,11 @@ COPY --from=build /app/src/.env .env
 # Exponer el puerto en el que se ejecuta la aplicación
 EXPOSE 8080
 
+# Establecer un usuario no privilegiado
+RUN adduser --disabled-password --gecos "" container_user 
+# Utiliza el usuario no privilegiado
+USER container_user
+
 # Comando para ejecutar la aplicación
 CMD ["./main"]
+
