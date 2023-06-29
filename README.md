@@ -2,6 +2,8 @@
 
 ## <strong>Método de uso</strong>
 
+Antes de iniciar, se debe hacer la modificación de la variable POSTGRES_FOLDER dentro del archivo .env ubicado en la raiz del repositorio. Esta ruta hace referencia a la carpeta que será utilizada como volumen del contenedor de la base de datos para darle persistencia persistencia de datos al contenedor
+
 Se debe ejecutar el comando docker-compose build y posteriormente el comando docker-compose up. La primera vez que inicia se va a genera un error, ya que la dependencia de contenedores contempla el inicio del contenedor y no del servicio que ejecuta tal contenedor. Cuando comienza el contenedor del aplicativo aún no ha terminado de inicializar el servicio de postgres, por lo que el aplicativo genera un error al no encontrar la base de datos disponible.
 
 Al terminar la inicialización de la base de datos, se deben bajar los dos contenedores y volver a ejecutarlos, el problema no se volverá a presentar.
