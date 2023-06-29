@@ -1,7 +1,7 @@
 # TO-DO Redactar nueva documentación completa
 
 
-<strong>NOTA: este archivo es provicional, es para dar claridad sobre el uso del aplicativo para una revisión inicial. En el transcurso del día iré actualizando esta documentación.</strong>
+<strong>NOTA: este archivo es provisional, es para dar claridad sobre el uso del aplicativo para una revisión inicial. En el transcurso del día iré actualizando esta documentación.</strong>
 ## Método de uso
 
 Inicialmente realicé el cargue de la aplicación lista para funcionar. Se debe ejecutar el comando docker-compose build y posteriormente un docker-compose up. La primera vez que inicia se va a genera un error, ya que la dependencia de contenedores contempla el inicio del contenedor y no del servicio que ejecuta tal contenedor. Cuando comienza el contenedor del aplicativo aún no ha terminado de inicializar el servicio de postgres, por lo que el aplicativo genera un error al no encontrar la base de datos disponible.
