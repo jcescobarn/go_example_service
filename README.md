@@ -200,4 +200,4 @@ Además, se propone utilizar un lambda authorizer con los métodos de apigw con 
 
 Para la base de datos, en atención a que el ejercicio exigía que se desarrollara en contendor, la base de datos también se desplegará en un contendor de ecs dentro de una red privada, con todas las configuraciones necesarias para que sea accesible desde el cluster del backend. En caso de no ser necesario el uso de contenedores, se podría cambiar el ecs por una instancia ec2 o una RDS
 
-![Diagrama Cloud](./assets/images/cloud_graph.jpg)
+![Diagrama Cloud](./go-backend/assets/images/cloud_graph.jpg)
