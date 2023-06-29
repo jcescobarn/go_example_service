@@ -189,7 +189,7 @@ La table user será la encargada de almacenar la información que utilizará el 
 ### Contenedor 
 Para el contenedor de base de datos, se optó por utilizar una imagen alpine de postgres en su versión 15.3, se utilizó el entrypoint para cargar un script con código SQL que inicializa las bases de datos para poder ser gestionada por el aplicativo backend. Este contenedor se gestiona con Docker Compose, por lo que tenemos un archivo docker-compose.yaml en el arbol del proyecto, este archvio conecta el puerto 5432 del contenedor con el puerto 5432 del host para poder interactuar con la base de datos desde fuera del contenedor. También crea un volumen buscando mantener la persistencia de datos que no nos ofrece solo el contenedor. Para finalizar, el archivo docker-compose.yaml también inicializa una red virtual a la que posteriormente se conectará el cotenedor con el aplicativo backend para poder consultar la base de datos.
 
-![Análisis](./DB/assets/docker_scout_screenshot.png)
+![Análisis](./go-backend//assets//docker_scout_screenshot.png)
 ## Implementación en nube
 
 Para implementar el backend, se propone utilizar un cluster de ecs ubicado en una red pública, a este cluster le apuntará un balanceador de carga el cual estará encargado de distribuir el trafico entrante a cada una de las task definidas en el cluster y así poder llevar a cabo un escalamiento horizontal en caso de ser necesario por el trafico de peticiones.
